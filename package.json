@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./index.js",
-    "vercel-build": "npx database deploy"
+    "build": "node build-script.js",
+    "vercel-build": "npm run build"
   },
   "keywords": [],
   "author": "",
