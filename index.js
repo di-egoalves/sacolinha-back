@@ -5,12 +5,12 @@ const bcrypt = require("bcrypt");
 const cors = require("cors");
 
 const app = express();
-const port = process.env.PORT || 3001;
 
 authenticate(connection);// Estabelece a conecção com o banco MySQL
 app.use(express.json());// Estabelece o uso do Express
-app.use(cors({ origin: "http://localhost:3000"}));// Esrabelece a conecção da API com o FRONT
-app.use(express.static("uploads"))
+app.use(cors());// Esrabelece a conecção da API com o FRONT
+app.use(express.static("uploads"));
+app.use(express.urlencoded({extended: true}))
 //Rotas
 const Administrador = require("./database/usuario");
 const rotasConsumidores = require("./routes/Consumidores");

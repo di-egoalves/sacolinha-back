@@ -9,6 +9,7 @@ const connection = new Sequelize(
 
     host: process.env.DB_HOST, // Host do banco de dados
     dialect: "mysql", // Dialeto do banco de dados (MySQL)
+    port: process.env.DB_PORT
   }
 );
 
