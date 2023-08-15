@@ -63,7 +63,7 @@ router.post(
                 .status(201)
                 .json({ message: "Produto inserido com sucesso!", novoProduto });
         } catch (error) {
-            res.status(500).json({ message: "Erro interno do servidor" }, error);
+            res.status(500).json({ message: "Erro interno do servidor", error });
         }
     }
 );
