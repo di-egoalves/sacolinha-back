@@ -12,7 +12,7 @@ const Produto = connection.define("produto", {
         allowNull: false, // Não permite valores nulos
     },
     descricao: {
-        type: DataTypes.STRING(150), // Tipo de dado para a descrição do produto (string com tamanho máximo de 150 caracteres)
+        type: DataTypes.STRING(300), // Tipo de dado para a descrição do produto (string com tamanho máximo de 150 caracteres)
         allowNull: false, // Não permite valores nulos
     },
     desconto: {
